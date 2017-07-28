@@ -4,15 +4,17 @@ The **mesos-slave-attribute-appender** is for those of us who have torn our hair
 
 Seriously, look at this madness.
 
-BEFORE:
+ORIGINAL QUERY:
 ![before](./before.png "before")
-
-AFTER:
-![after](./after.png "after")
 
 ewwwwwwww
 
-That's where mesos-slave-attribute-appender comes in! Just run it on all your slave nodes (e.g. as a systemd unit), and set up your Prometheus to scrape this thing for your slave metrics instead. It appends the attributes from the `mesos-slave-common` file as new labels onto the end of each metric.
+But that's where mesos-slave-attribute-appender comes in! Just run it on all your slave nodes (e.g. as a systemd unit), and set up your Prometheus to scrape this thing for your slave metrics instead. It appends the attributes from the `mesos-slave-common` file as new labels onto the end of each metric.
+
+IMPROVED QUERY:
+![after](./after.png "after")
+
+ahhhhh :)
 
 # Usage
 You will need to pass it the following environment variables:
